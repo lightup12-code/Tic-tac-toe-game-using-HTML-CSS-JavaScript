@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  font-size: 2.5em;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cell:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cell.x::before {
+  content: "X";
+  color: #ff6b6b;
+}
+
+.cell.o::before {
+  content: "O";
+  color: #4ecdc4;
+}
+
+.result-message {
+  margin: 20px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+#restartButton {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#restartButton:hover {
+  background-color: #555;
+}
+
+#restartButton:active {
+  transform: scale(0.98);
+}
